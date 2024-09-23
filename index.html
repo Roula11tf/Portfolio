@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roula Faddoul - Front-End Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Roula Faddoul</h1>
+        </div>
+        <button id="theme-toggle">
+            <i id="theme-icon" class="fas fa-sun"></i>
+        </button>
+    </header>
+    
+    <main>
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="profile-content">
+                <img src="WhatsApp Image 2024-09-05 at 12.36.02_68cf9e2e.jpg" alt="Roula Faddoul" class="profile-photo">
+                <div class="description">
+                    <h2>Front-End Developer 
+                        <i class="fas fa-check-circle verified-icon"></i> <!-- Font Awesome Checkmark -->
+                    </h2>
+                    <p>Creating interactive and responsive web applications with modern technologies and best practices.</p>
+                </div>
+            </div>
+            <div class="social-media-icons">
+                <a href="https://www.instagram.com/roulafaddoul100/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100003278469893" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/roula-faddoul-9b1433258/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </section>
+        
+
+        <!-- Certificates Section -->
+        <section class="certificates">
+            <h2>Certifications</h2>
+            <table id="certificates-table">
+                <!-- Certificates will be dynamically added here -->
+                <tr>
+                    <td><img src="WhatsApp Image 2024-09-04 at 02.05.30_0a25fef0.jpg" alt="Certificate 1"></td>
+                    <td><img src="WhatsApp Image 2024-09-04 at 02.05.32_86eacf10.jpg" alt="Certificate 2"></td>
+                </tr>
+                <tr>
+                    <td><img src="WhatsApp Image 2024-09-04 at 02.05.32_a93218f1.jpg" alt="Certificate 3"></td>
+                    <td><img src="WhatsApp Image 2024-09-04 at 02.07.01_7573f622.jpg" alt="Certificate 4"></td>
+                </tr>
+                <tr>
+                    <td><img src="WhatsApp Image 2024-09-04 at 02.07.01_920c7c8e.jpg" alt="Certificate 5"></td>
+                    <td><img src="WhatsApp Image 2024-09-04 at 02.07.01_a3c93bdf.jpg" alt="Certificate 6"></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">ASP.NET</div>
+                <div class="skill-item">C#</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">PHP</div>
+                <!-- Add more skills if needed -->
+            </div>
+        </section>
+    </main>
+
+    <section class="contact" style="background: linear-gradient(145deg, #f5f7fa, #c3cfe2);">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="https://formspree.io/f/manwgled" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <!--<input type="hidden" name="_subject" value="New message from your website!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_cc" value="ccemail@example.com">
+            <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you">-->
+            <button type="submit" class="submit-btn">Send Message</button> 
+        </form>
+    </section>
+    
+    <footer>
+        <p>© 2024 Roula Faddoul</p>
+    </footer>
+    
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
