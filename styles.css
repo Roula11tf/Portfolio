@@ -323,10 +323,15 @@ form {
 
 
 /* Base styles for the certificates table */
+.certificates-table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
 .certificates-table {
     width: 100%; /* Ensure the table takes full width */
     border-collapse: collapse;
     margin: 20px 0;
+    min-width: 600px; /* Ensure the table doesn't shrink too much */
 }
 
 .certificates-table th, .certificates-table td {
@@ -335,40 +340,23 @@ form {
     text-align: left;
 }
 
-/* For mobile: make the table scrollable and adjust font size */
+.certificates-table img {
+    max-width: 100px; /* Limit image size */
+    height: auto;
+    display: block;
+}
+
+/* Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
-    /* Allow horizontal scrolling on small screens */
     .certificates-table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+        overflow-x: auto; /* Enable horizontal scrolling on mobile */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
 
     .certificates-table {
-        width: 100%; /* Make the table fit the screen */
-        font-size: 0.9rem; /* Adjust font size for readability */
-    }
-
-    .certificates-table th, .certificates-table td {
-        padding: 8px; /* Reduce padding on mobile */
-        font-size: 0.85rem; /* Smaller font size on mobile */
-    }
-    
-    /* Optional: Make the table responsive with stacking rows */
-    .certificates-table td {
-        display: block;
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    .certificates-table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 10px;
-        text-align: left;
-        font-weight: bold;
+        width: 100%; /* Make sure it fits inside the container */
+        min-width: 500px; /* Avoid shrinking too much */
     }
 }
+
 
