@@ -323,40 +323,60 @@ form {
 
 
 /* Base styles for the certificates table */
-.certificates-table-wrapper {
-    overflow-x: auto; /* Enable horizontal scrolling */
-}
-
 .certificates-table {
-    width: 100%; /* Ensure the table takes full width */
+    width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    min-width: 600px; /* Ensure the table doesn't shrink too much */
+    border: 1px solid #ddd;
 }
 
 .certificates-table th, .certificates-table td {
     padding: 10px;
-    border: 1px solid #ddd;
     text-align: left;
+    border: 1px solid #ddd;
 }
 
 .certificates-table img {
-    max-width: 100px; /* Limit image size */
+    max-width: 100px;
     height: auto;
     display: block;
 }
 
-/* Responsive adjustment for smaller screens */
+/* Mobile responsive design: make the table stack vertically as one column */
 @media (max-width: 768px) {
-    .certificates-table-wrapper {
-        overflow-x: auto; /* Enable horizontal scrolling on mobile */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    .certificates-table, .certificates-table thead, .certificates-table tbody, .certificates-table th, .certificates-table td, .certificates-table tr {
+        display: block; /* Make table elements block-level */
+        width: 100%;
     }
 
-    .certificates-table {
-        width: 100%; /* Make sure it fits inside the container */
-        min-width: 500px; /* Avoid shrinking too much */
+    /* Hide the table headers (since they will be shown in the cells as labels) */
+    .certificates-table thead {
+        display: none;
+    }
+
+    .certificates-table td {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50%;
+        position: relative;
+        text-align: left;
+    }
+
+    /* Add the label (using data-label) before each cell in the stacked column */
+    .certificates-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%; /* Adjust width for the label */
+        padding-right: 10px;
+        font-weight: bold;
+    }
+
+    /* Adjust the image size for smaller screens */
+    .certificates-table img {
+        max-width: 80px;
     }
 }
+
 
 
