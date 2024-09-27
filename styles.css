@@ -342,37 +342,17 @@ form {
     display: block;
 }
 
-/* Responsive layout for mobile devices */
-@media (max-width: 768px) {
-    .certificates-table thead {
-        display: none; /* Hide the table headers */
+.certificates-table2{
+    visibility: collapse;
+}
+
+@media only screen and (max-width: 390px){
+    .certificates-table1{
+        visibility: collapse;
     }
 
-    .certificates-table, .certificates-table tbody, .certificates-table tr, .certificates-table td {
-        display: block; /* Make all table elements block-level */
-        width: 100%;
-    }
-
-    .certificates-table td {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 50%; /* Add space to the left to make room for labels */
-        position: relative;
-        text-align: left;
-        border: none; /* Remove borders for a cleaner look */
-        margin-bottom: 10px; /* Add space between rows */
-    }
-
-    /* Add the label before each cell's content */
-    .certificates-table td::before {
-        content: attr(data-label); /* Use data-label as the content */
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-    }
-
-    .certificates-table td img {
-        max-width: 80px; /* Adjust image size for mobile */
+    .certificates-table2{
+        visibility: visible;
     }
 }
 
