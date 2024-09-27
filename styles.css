@@ -95,6 +95,8 @@ footer {
     text-align: center;
 }
 
+
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -127,6 +129,7 @@ table img:hover {
 .skills {
     padding: 3rem;
     background-color: var(--background-color);
+    text-align: center;
 }
 
 .skills-grid {
